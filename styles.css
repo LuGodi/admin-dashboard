@@ -7,10 +7,48 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "sidebar navigation"
+    "sidebar main-container";
+  row-gap: 40px;
+  min-height: 100vh;
+  grid-template-rows: 1fr 5fr;
+}
+.navigation {
+  grid-area: navigation;
 }
 
 .sidebar {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, max-content);
   row-gap: 40px;
+  grid-area: sidebar;
+}
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  grid-area: main-container;
+  background-color: #5899af78;
+  padding: 2rem;
+}
+.main-left-container {
+  flex-grow: 1;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.project-cards {
+  background-color: white;
+  border-radius: 8px;
+  min-height: 200px;
+  border-left: solid 8px rgb(218, 168, 32);
+}
+
+.main-right-container {
+}
+ul {
+  list-style-type: none;
 }
