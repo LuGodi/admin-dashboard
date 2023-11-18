@@ -93,9 +93,12 @@
   background-color: #c7d2fe;
   padding: 2rem;
   grid-template-columns: 3fr 1fr;
+  grid-template-areas: "main-left-container announcements" "main-left-container trending";
+  grid-template-rows: auto 1fr;
 }
 .main-left-container {
   flex-grow: 1;
+  grid-area: main-left-container;
 }
 .header-main-container {
   margin-bottom: 1rem;
@@ -116,7 +119,18 @@
 }
 .main-right-container {
   display: grid;
-  grid-template-rows: max-content 1fr max-content 1fr;
+  grid-template-rows: max-content 1fr;
+}
+.announcements {
+  grid-area: announcements;
+}
+.trending {
+  grid-area: trending;
+  display: flex;
+  flex-direction: column;
+}
+.trending > ul {
+  flex-grow: 1;
 }
 .announcements,
 .trending {
