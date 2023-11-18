@@ -6,6 +6,11 @@
 }
 :root {
   --border-radius-nav: 20px;
+  --main-bg-color: #6366f1;
+  --secondary-bg-color: #c7d2fe;
+  --font-size--small: 0.5rem;
+  --font-size-medium: 0.8rem;
+  --font-size-large: 1.2rem;
 }
 
 .wrapper {
@@ -49,6 +54,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  align-self: center;
 }
 .nav-username .img {
   display: inline-block;
@@ -61,9 +67,10 @@
   justify-self: flex-end;
   display: flex;
   gap: 20px;
+  align-self: center;
 }
 .nav-buttons button {
-  background-color: #6366f1;
+  background-color: var(--main-bg-color);
   border: none;
   border-radius: var(--border-radius-nav);
   color: white;
@@ -75,7 +82,7 @@
   grid-template-rows: repeat(3, max-content);
   row-gap: 50px;
   grid-area: sidebar;
-  background-color: #6366f1;
+  background-color: var(--main-bg-color);
   z-index: 2;
   color: white;
   padding: 15px 1rem;
@@ -91,7 +98,7 @@
   display: grid;
   gap: 20px;
   grid-area: main-container;
-  background-color: #c7d2fe;
+  background-color: var(--secondary-bg-color);
   padding: 2rem;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "main-left-container announcements" "main-left-container trending";
@@ -106,8 +113,10 @@
 }
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 320px);
+  grid-template-columns: repeat(2, 360px);
+
   gap: 40px;
+  grid-auto-rows: 190px;
 }
 .project-cards {
   background-color: white;
@@ -133,9 +142,7 @@
 .trending > ul {
   flex-grow: 1;
 }
-.announcements,
-.trending {
-}
+
 .announcements-list,
 .trending-list {
   display: flex;
@@ -152,7 +159,11 @@
 .announcements-list > li > :not(h4),
 .project-cards > :not(h4) {
   color: #9294e7;
-  font-size: 0.8rem;
+  font-size: var(--font-size-medium);
+}
+.announcements-list > li > p {
+  font-size: var(--font-size--small);
+  margin-top: 0.8rem;
 }
 .announcements-list > li {
   padding-bottom: 1rem;
