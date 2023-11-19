@@ -9,6 +9,7 @@
   --main-bg-color: #6366f1;
   --secondary-bg-color: #c7d2fe;
   --font-size--small: 0.5rem;
+  --font-size--small-larg: 0.6rem;
   --font-size-medium: 0.8rem;
   --font-size-large: 1.2rem;
 }
@@ -39,13 +40,16 @@
   align-items: center;
   gap: 10px;
 }
-
+.nav-search label {
+  margin-top: 6px;
+}
 .nav-search input {
   flex-grow: 1;
   border-radius: var(--border-radius-nav);
   border: none;
   background-color: #c7d2fe;
   height: 25px;
+  padding: 13px;
 }
 .notification-span {
   justify-self: flex-end;
@@ -54,7 +58,8 @@
   align-items: center;
   margin-right: 7rem;
 }
-.notification-span .img {
+.notification-span .img,
+.trending .img {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -104,14 +109,26 @@
   padding: 15px 1.5rem;
   padding-right: 0;
 }
+.sidebar .logo {
+  display: flex;
+  color: white;
+
+  align-items: center;
+}
+.cat-svg {
+  fill: white;
+}
+
 .sidebar h1 {
   margin-left: 1rem;
+  margin-top: 3px;
 }
 .sidebar > ul {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 .sidebar > ul > li {
   display: flex;
@@ -155,6 +172,7 @@
   grid-template-rows: min-content 1fr auto;
   align-items: flex-start;
   padding-bottom: 15px;
+  gap: 10px;
 }
 .project-buttons ul {
   display: flex;
@@ -190,17 +208,27 @@
   border-radius: 8px;
   box-shadow: 5px 5px 5px 0px #3636364f;
 }
+.trending-list {
+  gap: 2rem;
+}
+.trending-list > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-medium);
+  font-weight: 100;
+}
 .announcements-list > li:not(:last-of-type) {
   border-bottom: 1px solid #9294e7;
 }
-.announcements-list > li > :not(h4),
-.project-cards > :not(h4) {
+.announcements-list > li > :not(h5, h4),
+.project-cards > :not(h5, h4) {
   color: #9294e7;
   font-size: var(--font-size-medium);
 }
 .announcements-list > li > p {
   font-size: var(--font-size--small);
-  margin-top: 0.8rem;
+  margin-top: 0.2rem;
 }
 .announcements-list > li {
   padding-bottom: 1rem;
@@ -215,4 +243,12 @@
 
 ul {
   list-style-type: none;
+}
+
+button,
+.project-buttons span,
+label[for="search-input"],
+.notification-span,
+.sidebar-nav > li {
+  cursor: pointer;
 }
