@@ -15,7 +15,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 2fr 6fr;
   grid-template-areas:
     "sidebar navigation"
     "sidebar main-container";
@@ -25,12 +25,14 @@
 .navigation {
   grid-area: navigation;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.8fr 1fr;
   align-items: end;
   gap: 20px;
-  padding: 15px 50px;
+  padding: 15px 26px;
   box-shadow: 0px 5px 5px 0px #3636364f;
   position: relative;
+  align-items: center;
+  padding-right: 60px;
 }
 .nav-search {
   display: flex;
@@ -48,7 +50,15 @@
 .notification-span {
   justify-self: flex-end;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
+  margin-right: 7rem;
+}
+.notification-span .img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: blue;
 }
 .nav-username {
   display: flex;
@@ -63,11 +73,17 @@
   border-radius: 50%;
   background-color: blue;
 }
+.nav-introduction {
+  align-self: center;
+}
+.nav-introduction p {
+  font-size: var(--font-size--small);
+}
 .nav-buttons {
-  justify-self: flex-end;
   display: flex;
   gap: 20px;
   align-self: center;
+  justify-content: center;
 }
 .nav-buttons button {
   background-color: var(--main-bg-color);
@@ -75,7 +91,7 @@
   border-radius: var(--border-radius-nav);
   color: white;
   width: 80px;
-  height: 30px;
+  height: 35px;
 }
 .sidebar {
   display: grid;
@@ -85,13 +101,22 @@
   background-color: var(--main-bg-color);
   z-index: 2;
   color: white;
-  padding: 15px 1rem;
+  padding: 15px 1.5rem;
+  padding-right: 0;
+}
+.sidebar h1 {
+  margin-left: 1rem;
 }
 .sidebar > ul {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
   font-size: 1.2rem;
+}
+.sidebar > ul > li {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .main-container {
@@ -126,6 +151,18 @@
   border-left: solid 8px #9333ea;
   padding: 30px 25px;
   box-shadow: 5px 5px 5px 0px #3636364f;
+  display: grid;
+  grid-template-rows: min-content 1fr auto;
+  align-items: flex-start;
+  padding-bottom: 15px;
+}
+.project-buttons ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-right: 10px;
+  color: black;
+  font-size: 10px;
 }
 .main-right-container {
   display: grid;
