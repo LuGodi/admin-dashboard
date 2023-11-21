@@ -67,10 +67,12 @@
   background-color: blue;
 }
 .nav-username {
-  display: flex;
+  display: grid;
   align-items: center;
   gap: 10px;
   align-self: center;
+  grid-template-columns: auto auto;
+  justify-content: start;
 }
 .nav-username .img {
   display: inline-block;
