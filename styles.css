@@ -17,7 +17,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 2fr 10fr;
   grid-template-areas:
     "sidebar navigation"
     "sidebar main-container";
