@@ -17,7 +17,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: minmax(min-content, 18rem) 10fr;
   grid-template-areas:
     "sidebar navigation"
     "sidebar main-container";
@@ -149,6 +149,8 @@
 .main-left-container {
   flex-grow: 1;
   grid-area: main-left-container;
+  display: grid;
+  grid-template-rows: min-content auto;
 }
 .header-main-container {
   margin-bottom: 1rem;
