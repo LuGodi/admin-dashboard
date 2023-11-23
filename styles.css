@@ -7,8 +7,10 @@
 }
 :root {
   --border-radius-nav: 20px;
-  --main-bg-color: #6366f1;
-  --secondary-bg-color: #c7d2fe;
+  --main-bg-color: black;
+  --secondary-bg-color: #ff6000;
+  --secondary-bg-color-text: #725e51;
+  --alternative-color: rgb(206, 11, 206);
   --font-size--small: 1.3rem;
   --font-size--small-larg: 1.4rem;
   --font-size-medium: 1.6rem;
@@ -52,7 +54,7 @@ h2 {
   flex-grow: 1;
   border-radius: var(--border-radius-nav);
   border: none;
-  background-color: #c7d2fe;
+  background-color: var(--secondary-bg-color);
   height: 25px;
   padding: 13px;
 }
@@ -67,7 +69,7 @@ h2 {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: var(--alternative-color);
 }
 .nav-username {
   display: grid;
@@ -86,7 +88,7 @@ h2 {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: var(--alternative-color);
 }
 .nav-introduction {
   align-self: center;
@@ -174,7 +176,7 @@ h2 {
   background-color: white;
   border-radius: 8px;
   min-height: 18rem;
-  border-left: solid 12px #9333ea;
+  border-left: solid 12px var(--alternative-color);
   padding: 30px 25px;
   box-shadow: 5px 5px 5px 0px #3636364f;
   display: grid;
@@ -215,13 +217,13 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 35px 25px;
-  gap: 1rem;
+  gap: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 5px 5px 5px 0px #3636364f;
 }
 .trending-list {
-  gap: 2rem;
+  gap: 3rem;
 }
 .trending-list > li {
   display: flex;
@@ -231,15 +233,15 @@ h2 {
   font-weight: 100;
 }
 .announcements-list > li:not(:last-of-type) {
-  border-bottom: 1px solid #9294e7;
+  border-bottom: 1px solid var(--secondary-bg-color);
 }
 .announcements-list > li > :not(h5, h4),
 .project-cards > :not(h5, h4) {
-  color: #9294e7;
+  color: var(--secondary-bg-color-text);
   font-size: var(--font-size-medium);
 }
 h4 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 h5 {
   font-size: 1.25rem;
